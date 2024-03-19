@@ -6,10 +6,7 @@ def main():
     book = get_book(file)
     words = get_word_count(book)
     letters = get_letter_count(book)
-    print(f"""
-          --- Begin report of {file} ---
-          There are {words} words in this document and the unique letter counts are as follows:\n
-          """)
+    print(f"""--- Begin report of {file} ---\nThere are {words} words in this document and the unique letter counts are as follows:\n""")
     get_letter_report(letters)
     print("--- End report ---")
 
