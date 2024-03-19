@@ -6,7 +6,11 @@ def main():
     book = get_book(file)
     words = get_word_count(book)
     letters = get_letter_count(book)
-    print(f"There are {words} words in this  document and \n {letters} are the unique letter counts")
+    print(f"""
+          --- Begin report of {file} ---
+          There are {words} words in this document and the unique letter counts are as follows:\n
+          """)
+    get_letter_report(letters)
 
 #This method will get the book
 def get_book(book_path):
@@ -29,6 +33,13 @@ def get_letter_count(book):
         if char in letter_dict:
             letter_dict[char] += 1
     return letter_dict
+
+def get_letter_report(dict):
+    sorted_dict = sorted(dict)
+    for letter in dict:
+        i = 0
+        print(f" the '{letter}' value was found {letter[i]} times")
+        i += 1
 
 #Executes the main method of the program
 main()
