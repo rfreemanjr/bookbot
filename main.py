@@ -11,6 +11,7 @@ def main():
           There are {words} words in this document and the unique letter counts are as follows:\n
           """)
     get_letter_report(letters)
+    print("--- End report ---")
 
 #This method will get the book
 def get_book(book_path):
@@ -36,10 +37,9 @@ def get_letter_count(book):
 
 def get_letter_report(dict):
     sorted_dict = sorted(dict)
-    for letter in dict:
-        i = 0
-        print(f" the '{letter}' value was found {letter[i]} times")
-        i += 1
+    for i in range(0,len(dict)):
+        print(f"The '{sorted_dict[i]}' character appears {dict[sorted_dict[i]]} times")
+        
 
 #Executes the main method of the program
 main()
