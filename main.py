@@ -35,6 +35,7 @@ def get_letter_count(book):
             letter_dict[char] += 1
     return letter_dict
 
+#This method produces the amount of times a character appears in the text.
 def get_letter_report(dict):
     sorted_dict = sorted(dict)
     for i in range(0,len(dict)):
